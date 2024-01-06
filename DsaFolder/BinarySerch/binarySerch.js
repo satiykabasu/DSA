@@ -57,3 +57,8 @@ function serchElement(matrix,n,m,target){
 }
 
 console.log(serchElement([3,4,7,9,12,13,14,18,20,21,23,29],3,4,23))
+
+
+
+
+// if somewhere given that output will least/minium of maxium => then see the capacity program of binary serch
