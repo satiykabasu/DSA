@@ -24,11 +24,6 @@ function selectionSort(arr){
  }
  return arr;
 }
-function printArray(arr){
-    for(let i=0;i<=arr.length-1;i++){
-        console.log(arr[i])
-    }
-}
+
 
 console.log(selectionSort([13,46,24,52,20,9]))
-printArray()
