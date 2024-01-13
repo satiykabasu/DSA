@@ -29,6 +29,18 @@ proved that there is no such greter quotient possible
 */
 
 function maxiumQuotient(arr){
-for(let i=0;i<arr.length-1;){}
+let totalSum=arr.reduce((acc,curr)=>(acc+curr),0)
+let quotientArray=[];
+let sumArray=[];
+let sum=0;
+for(let i=0;i<arr.length;i++){
+let temp=arr[i];
+arr[i]=arr[i+1];
+arr[i+1]=temp;
+sum += arr[i];
+sumArray.push(sum);
+
+}
+return sumArray
 }
 console.log(maxiumQuotient([1,1,3]))

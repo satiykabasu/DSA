@@ -23,7 +23,7 @@ function colWiseSum(arr,row,col){
           for(let i=0;i<row;i++){
              
               for(let j=0;j<col;j++){
-                  sum += arr[i][j]
+                  sum += arr[j][i]
               }
              
           }

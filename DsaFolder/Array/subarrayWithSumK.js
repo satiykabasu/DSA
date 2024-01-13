@@ -30,7 +30,7 @@ function subarrySomeBetter(arr,target){
         for(let j=0;j<arr.length;j++){
            
          
-             sum=sum+arr[k];
+             sum=sum+arr[j];
         }
             if(sum===target){
                 count++
