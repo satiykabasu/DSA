@@ -51,7 +51,9 @@ All the words in sentences[i] are separated by a single space.
 //basically have to return the maxSize of arr.length
 
 function maxNoOfWordInString(str){
-let elementArray=[];
-elementArray.push(str.split(" "));
+//let elementArray=[];
+let elementArray=str.map((item)=>item.split(" ").length);
+return Math.max(...elementArray);
 
 }
+console.log(maxNoOfWordInString(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]))

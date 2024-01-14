@@ -45,19 +45,28 @@ n == accounts[i].length
 */
 
 function twoDArray(arr){
-    arr.sort((a,b)=>a-b)
+    //arr.sort((a,b)=>a-b)
     let totalRow=arr.length;
-    let totalCol=totalRow[0].length;
-    let start=0;
-    let end=(totalRow*totalCol)-1;
-    let col=mid%col;
-    let row=Math.floor(mid/totalCol);
-    let value=arr[row][col];
+    let totalCol=totalRow[i].length;
+    // let start=0;
+    // let end=(totalRow*totalCol)-1;
+    // let col=mid%col;
+    // let row=Math.floor(mid/totalCol);
+    // let value=arr[row][col];
 
     // while(start<=end){
     //     if(value===)
     // }
-    console.log(arr);
+   // console.log(arr);
+   for(let i=0;i<totalRow;i++){
+    for(let j=0;j<totalCol;j++){
+        
+        if(arr[i][j]===5){
+            return [i,j]
+        }
+    }
+   }
+   return [-1,-1]
 
 }
 twoDArray([[1,2,5],[3,5,5,5],[5,1],[6,7,5,4] ])
