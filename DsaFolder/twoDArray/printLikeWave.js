@@ -33,4 +33,8 @@ for(let col=0;col<cols;col++){
 
 }
 
-console.log(printLikeWave([[3,4,11],[2,12,1],[7,8,7]],3,3))
+console.log(printLikeWave([[1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16],
+    [17, 18, 19, 20]]))

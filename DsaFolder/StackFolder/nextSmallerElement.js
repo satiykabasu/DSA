@@ -26,7 +26,7 @@ function nextSmallerElementBrute(arr){
 console.log("hi" + nextSmallerElementBrute([2,1,4,3]))
 
 function nextSmallerElementOptimal(arr){
-    let stack=[];
+    let stack=[];//from here we will get the smallest element;
     stack.push(-1);
     let ansArray=[];
     for(let i=arr.length-1;i>=0;i--){
@@ -41,3 +41,4 @@ function nextSmallerElementOptimal(arr){
 console.log("hello" + nextSmallerElementOptimal([2,1,4,3]))
 
 // in above function , for stack we will push the actuall value of array
+
