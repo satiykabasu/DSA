@@ -6,35 +6,39 @@
 
 
 
-function printLikeWave(arr,rows,cols){
+function printLikeWave(arr, rows, cols) {
 
-let ansArray=[];
+    let ansArray = [];
 
-for(let col=0;col<cols;col++){
-    if(col&1)// means the col is the odd 
-    {
-        // then print the row from bottom to top
-
-        for(let row=rows-1;row >= 0;row--){
-            ansArray.push(arr[row][col])
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            // for even index print like forward direction of column
+            if (j % 2 == 0) {
+                for (let i = 0; i < cols; j++) {
+                    ansArray.push(arr[i][j])
+                  
+                }
+            }
+            else {
+                //if the current col is odd index then print col in backward direction
+                for (let i = cols - 1; i >= 0; i--) {
+                    ansArray.push(arr[i][j])
+            
+                }
+            }
         }
     }
-    else{
-        for(let row=0;row<rows;row++){
-            ansArray.push(arr[row][col])
-        }
-    }
-   // return ansArray
-   console.log(ansArray)
-}
 
 
-
+    //return ansArray
 
 }
 
 console.log(printLikeWave([[1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12],
-    [13, 14, 15, 16],
-    [17, 18, 19, 20]]))
+[5, 6, 7, 8],
+[9, 10, 11, 12],
+[13, 14, 15, 16],
+[17, 18, 19, 20]]))
+
+
+// Output will be :

@@ -41,7 +41,7 @@ that's why , accoring to map we will store the total number of distinct char int
 value of one char in map become 0 then decrease the value of count => size of count will be equl to the 
 size of map
 4. when we gets our window size then we will check the value of count, if is 0 then pattern match
-5. when we do i++ then , if str1[j] present in map then have to increase the value and also increase the count value
+5. when we do i++ then , if str1[i] present in map then have to increase the value and also increase the count value
 
 */
 
@@ -59,40 +59,49 @@ for(let i=0;i<str2.length;i++){
 let count=countChar.size;
 let i=0;
 let j=0;
-let k=str2.length;
+let k=str2.length;//window size
 let countOccurenceOfChar=0;
 while(j<str1.length){
     if(countChar.has(str1[j])){
-        countChar.set(str1[j],(countChar.get(str1[j])-1))  
+        countChar.set(str1[j],(countChar.get(str1[j])-1))  ;
+        if((countChar.get(str1[j]))==0){
+            count--;
+        }
     }
-    if((countChar.get(str1[j]))==0){
-        count = count -1 ;
-    }
+    
 
     if((j-i+1)<k){
         j++;
     }
     else if((j-i+1)==k){
-    if(count ==0){
-        countOccurenceOfChar++;
-    }
-    //below step for exclude the str1[i]
+    if(count == 0){
+        countOccurenceOfChar++; // here we will get total number of ans;
 
-    if(countChar.has(str1[i])){
-        countChar.set(str1[i],(countChar.get(str1[i])+1))
+        //below step for exclude the str1[i]
+        if(countChar.has(str1[i])){
+            countChar.set(str1[i],(countChar.get(str1[i])+1))
+        }
+        if((countChar.get(str1[i]))==1){
+            count = count++ ;
+        }
     }
-    if((countChar.get(str1[i]))==1){
-        count = count + 1 ;
-    }
+    
+
+    
+   
+    
     i++;
     j++;
     
 
     }
-    return countOccurenceOfChar
+    //return countOccurenceOfChar
 
 }
-return countChar
+return countOccurenceOfChar
 }
 
-console.log(countOccurrence("aabaabaa","aaba"))
+console.log(countOccurrence("forxxorfxdofr","for"))
+
+
+

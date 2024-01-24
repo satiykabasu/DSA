@@ -9,8 +9,19 @@
 those above step
 */
 
+/*
+1. to print matrix in sprial format we have to track each boundaries
+a. top=> topmost row 
+b. bottom=> the bottommost row 
+c. left => the leftmost col
+d. right => the rightmost col
+2. step for iterate all over element in the matrix:
+a. print 
+*/
+
 function sprialPrint(){
 
 }
 
 console.log(sprialPrint())
+//show sol from gfg
